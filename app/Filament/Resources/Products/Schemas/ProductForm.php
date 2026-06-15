@@ -14,7 +14,9 @@ class ProductForm
                 TextInput::make('name')
                     ->required()
                     ->unique(),
-                TextInput::make('price')->required(),
+                TextInput::make('price')
+                    ->prefix('€')
+                    ->required(),
             ]);
     }
 }

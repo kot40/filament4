@@ -19,8 +19,8 @@ class ProductsTable
                     ->sortable()
                     ->searchable(),
                 TextColumn::make('price')
-                    ->money('USD')
-                    ->formatStateUsing(fn (int $state) => '$' . number_format($state / 100, 2, '.', ''))
+                    ->money('EUR', 100)
+                    // ->formatStateUsing(fn (int $state) => '$' . number_format($state / 100, 2, '.', ''))
                     ->sortable(),
             ])
             ->filters([
