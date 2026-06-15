@@ -19,7 +19,7 @@ class ProductsTable
                     ->sortable()
                     ->searchable(),
                 TextColumn::make('price')
-                    ->money('EUR', 100)
+                    ->money('EUR')
                     // ->formatStateUsing(fn (int $state) => '$' . number_format($state / 100, 2, '.', ''))
                     ->sortable(),
             ])
