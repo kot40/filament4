@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Products\Schemas;
 
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\TextInput;
 
 class ProductForm
 {
@@ -10,7 +11,8 @@ class ProductForm
     {
         return $schema
             ->components([
-                //
+                TextInput::make('name'),
+                TextInput::make('price'),
             ]);
     }
 }
