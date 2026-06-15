@@ -10,9 +10,9 @@ class CreateProduct extends CreateRecord
 {
     protected static string $resource = ProductResource::class;
 
-    #[Override]
-    protected function getRedirectUrl(): string
-    {
-        return ProductResource::getUrl('index');
-    }
+    // #[Override]
+    // protected function getRedirectUrl(): string
+    // {
+    //     return ProductResource::getUrl('index');
+    // }
 }

@@ -18,9 +18,9 @@ class EditProduct extends EditRecord
         ];
     }
 
-    #[Override]
-    protected function getRedirectUrl(): string
-    {
-        return ProductResource::getUrl('index');
-    }
+    // #[Override]
+    // protected function getRedirectUrl(): string
+    // {
+    //     return ProductResource::getUrl('index');
+    // }
 }
