@@ -15,8 +15,13 @@ class ProductsTable
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
-                TextColumn::make('price'),
+                TextColumn::make('name')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('price')
+                    ->money('USD')
+                    ->formatStateUsing(fn (int $state) => '$' . number_format($state / 100, 2, '.', ''))
+                    ->sortable(),
             ])
             ->filters([
                 //

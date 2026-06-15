@@ -11,8 +11,10 @@ class ProductForm
     {
         return $schema
             ->components([
-                TextInput::make('name'),
-                TextInput::make('price'),
+                TextInput::make('name')
+                    ->required()
+                    ->unique(),
+                TextInput::make('price')->required(),
             ]);
     }
 }
